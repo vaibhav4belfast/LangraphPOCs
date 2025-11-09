@@ -1,3 +1,4 @@
+import os
 from typing import TypedDict, List
 from langchain_core.messages import HumanMessage
 from langchain_openai import ChatOpenAI
@@ -24,5 +25,6 @@ agent = graph.compile()
 
 user_input = input("Enter: ")
 while user_input != "exit":
+    print(os.environ.get("OPENAI_API_KEY"))
     agent.invoke({"messages": [HumanMessage(content=user_input)]})
     user_input = input("Enter: ")
