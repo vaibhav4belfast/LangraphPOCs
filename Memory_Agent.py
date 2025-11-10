@@ -9,7 +9,7 @@ load_dotenv()
 class AgentState(TypedDict):
     messages: List[Union[HumanMessage, AIMessage]]
 
-llm = ChatOpenAI(model="gpt-4o")
+llm = ChatOpenAI(model="gpt-4o-mini")
 
 def process(state: AgentState) -> AgentState:
     """This node will solve the request you input"""

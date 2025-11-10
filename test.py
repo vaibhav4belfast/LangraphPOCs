@@ -4,6 +4,6 @@ load_dotenv()
 
 from langchain_openai import ChatOpenAI
 print("Vaibhav")
-llm = ChatOpenAI(model="gpt-3.5-turbo")
+llm = ChatOpenAI(model="gpt-4o-mini")
 response = llm.invoke([{"role": "user", "content": "Hello"}])
 print(response.content)
